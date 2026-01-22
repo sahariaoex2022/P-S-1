@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Saharia – Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { background:#2b2f36 }
+    .glass{background:rgba(255,255,255,.03);backdrop-filter:blur(6px)}
+    .accent{color:#c084fc}
+    .border-accent{border-color:#c084fc}
+  </style>
+</head>
+<body class="text-gray-300 font-mono">
+
+
+<!-- NAVBAR -->
+<header class="max-w-7xl mx-auto px-4 md:px-6 py-6">
+  <div class="flex items-center justify-between">
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-2 text-[22px] md:text-[26px] font-bold">
+      <img src="./Images/Logo1.png" class="w-7 h-7" alt="logo">
+      <span>SAHARIA</span>
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a class="accent text-[18px] hover:text-purple-400 cursor-pointer">#home</a>
+      <a class="accent text-[18px] hover:text-purple-400 cursor-pointer">#works</a>
+      <a class="accent text-[18px] hover:text-purple-400 cursor-pointer">#about-me</a>
+      <a class="accent text-[18px] hover:text-purple-400 cursor-pointer">#contacts</a>
+
+      <div class="flex items-center gap-1 text-[18px] cursor-pointer">
+        EN <img src="./Images/Group 58.png" class="w-3" alt="Language">
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden mt-6 glass border border-gray-600 rounded-lg p-6 space-y-4">
+    <a class="block accent text-lg">#home</a>
+    <a class="block accent text-lg">#works</a>
+    <a class="block accent text-lg">#about-me</a>
+    <a class="block accent text-lg">#contacts</a>
+
+    <div class="flex items-center gap-2 text-sm mt-4">
+      EN <img src="./Images/Group 58.png" class="w-3" alt="">
+    </div>
+  </div>
+</header>
+
+<!-- JS -->
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+
+ <!-- HERO SECTION -->
+<section
+  class="relative max-w-7xl mx-auto px-6 lg:px-8 py-20
+         grid lg:grid-cols-2 gap-12 items-center overflow-hidden">
+
+  <!-- LEFT CONTENT -->
+  <div class="relative z-10 max-w-xl">
+    <h1 class="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight">
+      Saharia is a
+      <span class="text-purple-400">web designer</span> and
+      <span class="text-purple-400">full stack developer</span>
+    </h1>
+
+    <p class="mt-4 text-sm text-gray-400">
+      He crafts responsive websites where technologies meet creativity
+    </p>
+
+    <button
+      class="mt-6 px-5 py-2 border border-purple-400
+             text-sm hover:bg-purple-500/10 transition">
+      Contact me!!
+    </button>
+  </div>
+
+  <!-- RIGHT IMAGE AREA -->
+  <div class="relative flex justify-end">
+
+    <!-- IMAGE GROUP -->
+    <div class="relative">
+
+      <!-- PURPLE OUTLINE SHAPES -->
+      <img
+        src="./Images/Logo.png"
+        class="absolute -left-24 top-8 w-50 opacity-90"
+        alt=""
+      />
+
+      <!-- DOTS -->
+      <img
+        src="./Images/Dots.png"
+        class="absolute right-4 top-1/2 -translate-y-1/2 w-20"
+        alt=""
+      />
+
+      <!-- MAIN IMAGE -->
+      <img
+        src="./Images/Image.png"
+        alt="profile"
+        class="relative z-10 w-[260px] md:w-[320px]"
+      />
+
+      <!-- STATUS BADGE -->
+    <div
+      class="mt-3 flex items-center gap-2
+             px-4 py-2 text-xs
+             border border-purple-400
+             bg-[#2b2f36]
+             text-white">
+      <span class="w-2 h-2 bg-purple-400"></span>
+      Currently working on Portfolio
+    </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="max-w-3xl mx-auto mt-26 px-6">
+  <div class="border text-[22px] border-gray-500 p-6 relative">
+    <p class="text-center">“ With great power comes great electricity bill ”</p>
+    <span class="absolute -bottom-4 right-6 bg-[#2b2f36] px-3 text-[20px]">– Mr. Who</span>
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section class="max-w-[1100px] mx-auto mt-28 px-6 text-gray-300 font-mono">
+
+  <!-- HEADER -->
+  <div class="flex justify-between  items-center mb-8">
+    <h2 class="text-[22px] cursor-pointer hover:text-purple-200"><span class="text-purple-400">#</span>Projects</h2>
+    <img src="./Images/Line 7 (Stroke).png" alt="">
+    <a href="#" class="text-text-[18px] hover:text-purple-400">
+      View all →
+    </a>
+  </div>
+
+  <!-- CARDS GRID -->
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <!-- CARD 1 -->
+    <div class="border border-[#3a3f46] bg-[#1f242c]">
+      <img src="./Images/Rectangle 22.jpg" class="w-full h-[180px] object-cover">
+
+      <div class="border-t border-[#3a3f46] p-8">
+        <p class="text-[16px] text-gray-400 mb-2">
+          HTML SCSS Python Flask
+        </p>
+         <hr>
+      <h3 class="text-[22px] text-white mb-1">ChertNodes</h3>
+
+        <p class="text-[17px] text-gray-400 mb-4">
+          Minecraft servers hosting
+        </p>
+
+        <div class="flex gap-2">
+          <button class=" cursor-pointer hover:text-purple-200 px-3 py-1 text-[18px] border border-purple-400 text-purple-400">
+            Live ↗
+          </button>
+          <button class="cursor-pointer hover:text-purple-200 px-3 py-1 text-[18px] border border-[#4b4f57]">
+            Cached >
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="border border-[#3a3f46] bg-[#1f242c]">
+      <img src="./Images/Group 2.png" class="w-full h-[180px] object-cover">
+
+      <div class="border-t border-[#3a3f46] p-8"">
+        <p class="text-[16px] text-gray-400 mb-2 leading-snug">
+          React Express Discord.js Node.js <br>
+          HTML SCSS Python Flask
+        </p>
+          <hr>
+        <h3 class="text-[22px] text-white mb-1">ProtectX</h3>
+
+        <p class="text-[17px] text-gray-400 mb-4">
+          Discord anti-crash bot
+        </p>
+
+        <button class=" cursor-pointer hover:text-purple-200 px-3 py-1 text-[18px] border border-purple-400 text-purple-400">
+          Live ↗
+        </button>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="border border-[#3a3f46] bg-[#1f242c]">
+      <img src="./Images/Group 1.png" class="w-full h-[180px] object-cover">
+
+      <div class="border-t border-[#3a3f46] p-8">
+        <p class="text-[16px] text-gray-400 mb-2">
+          CSS Express Node.js
+        </p>
+         <hr>
+        <h3 class="text-[22px] text-white mb-1">
+          Kahoot Answers Viewer
+        </h3>
+
+        <p class="text-[17px] text-gray-400 mb-4">
+          Get answers to your kahoot quiz
+        </p>
+
+        <button class=" cursor-pointer hover:text-purple-200 px-3 py-1 text-[18px] border border-purple-400 text-purple-400">
+          Live ↗
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="relative max-w-[1100px] mx-auto mt-25 px-6 text-white">
+
+  <!-- Section title -->
+  <div class="flex items-center gap-4 mb-14">
+    <h2 class="font-mono text-[22px] cursor-pointer hover:text-purple-200"><span class="text-purple-400">#</span>Skills</h2>
+    <img src="./Images/Group 16.png" alt="">
+  </div>
+
+  <!-- Left decorations -->
+  <div class="absolute left-60 top-20 hidden md:block">
+    <img src="./Images/Dots.png" alt="">
+  </div>
+
+  <div class="absolute left-15 top-50 hidden md:block">
+    <img src="./Images/Rectangle 24.png" alt="">
+  </div>
+
+  <div class="absolute left-60 top-100 hidden md:block font-mono text-purple-500 text-4xl">
+    <img src="./Images/logo22.png" alt="">
+  </div>
+
+  <div class="absolute left-10 top-140 hidden md:block">
+    <img src="./Images/Dots.png" alt="">
+  </div>
+
+ <!-- Skills cards -->
+<div class="relative mt-10
+            flex justify-start
+            lg:justify-end">
+
+  <div
+    class="
+      grid
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-2
+      gap-6
+
+      w-full
+      lg:max-w-[700px]
+    "
+  >
+
+    <!-- Languages -->
+    <div class="border border-white/30 p-7 text-[16px]">
+      <p class="mb-2 font-medium text-[20px] lg:text-[22px]">Languages</p>
+      <hr class="border-white/20">
+      <p class="text-white/70 mt-5 leading-relaxed text-sm lg:text-base">
+        TypeScript Lua<br>
+        Python JavaScript
+      </p>
+    </div>
+
+    <!-- Databases -->
+    <div class="border border-white/30 p-7 text-[16px]">
+      <p class="mb-2 font-medium text-[20px] lg:text-[22px]">Databases</p>
+      <hr class="border-white/20">
+      <p class="text-white/70 mt-5 leading-relaxed text-sm lg:text-base">
+        SQLite PostgreSQL<br>
+        MongoDB
+      </p>
+    </div>
+
+    <!-- Tools -->
+    <div class="border border-white/30 p-7 text-[16px]">
+      <p class="mb-2 font-medium text-[20px] lg:text-[22px]">Tools</p>
+      <hr class="border-white/20">
+      <p class="text-white/70 mt-5 leading-relaxed text-sm lg:text-base">
+        VSCode Neovim Linux<br>
+        Figma XFCE Arch<br>
+        Git Font Awesome
+      </p>
+    </div>
+
+    <!-- Other -->
+    <div class="border border-white/30 p-7 text-[16px]">
+      <p class="mb-2 font-medium text-[20px] lg:text-[22px]">Other</p>
+      <hr class="border-white/20">
+      <p class="text-white/70 mt-5 leading-relaxed text-sm lg:text-base">
+        HTML CSS SCSS<br>
+        REST Jinja
+      </p>
+    </div>
+
+    <!-- Frameworks -->
+    <div class="border border-white/30 p-7 text-[16px]">
+      <p class="mb-2 font-medium text-[20px] lg:text-[22px]">Frameworks</p>
+      <hr class="border-white/20">
+      <p class="text-white/70 mt-5 leading-relaxed text-sm lg:text-base">
+        React Vue<br>
+        Discord.js<br>
+        Flask Express.js
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+</section>
+
+<!-- ABOUT -->
+<section class="relative max-w-[1100px] mx-auto mt-25 px-6 text-white">
+
+  <!-- Section title -->
+  <div class="flex items-center gap-4 flex-nowrap">
+  <h2 class="font-mono cursor-pointer whitespace-nowrap
+             text-[22px] sm:text-[18px] md:text-[20px] lg:text-[22px]
+             hover:text-purple-200 transition">
+    <span class="text-purple-400">#</span>about-me
+  </h2>
+
+  <img
+    src="./Images/Line 7 (Stroke) (1).png"
+    alt=""
+    class="hidden sm:block"
+  >
+</div>
+
+
+  <!-- CONTENT WRAPPER -->
+  <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+    <!-- LEFT CONTENT -->
+    <div class="max-w-md">
+      <p class="text-white/70 text-[18px] mt-4 mb-4">Hello, I'm Saharia!</p>
+
+      <p class="text-white/60 text-16px leading-relaxed mb-6">
+        I'm a self-taught full stack developer based in Kyiv, Ukraine.
+        I can develop responsive websites from scratch and raise them
+        into modern user-friendly web experiences.
+      </p>
+
+      <p class="text-white/60 text-[16px] leading-relaxed mb-8">
+        Transforming my creativity and knowledge into a websites has been
+        my passion for over a year. I have been helping various clients
+        to establish their presence online. I always strive to learn
+        about the newest technologies and frameworks.
+      </p>
+
+      <button
+        class="px-4 py-2 text-[18px]
+               border border-purple-400
+               text-white
+               hover:bg-purple-400/10
+               transition">
+        Read more →
+      </button>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="relative flex justify-center lg:justify-end">
+
+      <!-- Dots decoration -->
+      <div class="absolute top-12 right-16 hidden lg:block">
+        <img src="./Images/Dots.png" alt="">
+      </div>
+
+      <div class="absolute bottom-14 right-80 hidden lg:block">
+        <img src="./Images/Logo.png" alt="">
+      </div>
+
+      <!-- IMAGE -->
+      <div class="relative">
+        <img 
+          src="./Images/Image2.png"
+          alt="about"
+          class="w-[245px] sm:w-[300px] lg:w-[340px]"
+        />
+
+        <!-- bottom line -->
+        <img src="./Images/Line 7 (Stroke) (1).png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+  <!-- CONTACT -->
+<section class="relative max-w-[1100px] mx-auto mt-25 mb-2 px-6 text-white">
+  <h2 class="font-mono text-[22px] cursor-pointer hover:text-purple-200"><span class="text-purple-400">#</span>contacts</h2>
+  <div class="flex flex-col md:flex-row justify-between">
+    <p class="text-[16px] mt-3 text-gray-400 max-w-md">
+      I'm interested in freelance opportunities.
+      Feel free to message me.
+    </p>
+    <!-- RIGHT CARD -->
+    <div class="flex lg:justify-end">
+      <div
+        class="border border-white/30
+               bg-[#1e232b]
+               p-8
+               w-[360px]
+               ">
+
+        <p class="mb-4 text-white/80 text-[18px] font-medium">
+          Message me here
+        </p>
+
+        <!-- Discord -->
+        <div class="flex items-center text-[16px] gap-3 mb-3 text-white/60">
+          <img src="./Images/Discord.png" class="w-4 h-4" alt="">
+          <span>!Saharia#3519</span>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-center text-[16px] gap-3 text-white/60">
+          <img src="./Images/Email.png" class="w-4 h-4" alt="">
+          <span>saharia96@gmail.com</span>
+        </div>
+
+      </div>
+    
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="mt-32 text-white ">
+
+  <!-- TOP PURPLE LINE -->
+  <div class="border-t border-purple-500/70 mb-10"></div>
+
+  <!-- MAIN FOOTER CONTENT -->
+  <div class="max-w-[1100px] mx-auto px-6
+              flex flex-col md:flex-row
+              justify-between gap-8">
+
+    <!-- LEFT -->
+    <div>
+      <div class="flex items-center gap-2 mb-2">
+        <img src="./Images/f-Logo.png" alt="">
+        <span class="font-mono text-[18px] text-white"> @Saharia</span>
+        <span class="text-[18px] text-white/50">saharia96@gmail.com</span>
+      </div>
+
+      <p class="text-white/50 text-[18px]">
+        Web designer and full stack developer
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+      <p class="mb-2 font-medium text-[20px]">Media</p>
+      <div class="flex gap-4 text-white/60">
+        <a href="#" class="hover:text-white transition">
+          <img src="./Images/Github.png" class="w-5" alt="">
+        </a>
+        <a href="#" class="hover:text-white transition">
+          <img src="./Images/Figma.png" class="w-5" alt="">
+        </a>
+        <a href="#" class="hover:text-white transition">
+          <img src="./Images/Discord.png" class="w-5" alt="">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM TEXT -->
+  <p class="text-center text-white/40 text-[22px] mb-4 mt-12">
+    © Copyright 2026. Made by Saharia
+  </p>
+
+</footer>
+
+
+
+
+</body>
+</html>
+
